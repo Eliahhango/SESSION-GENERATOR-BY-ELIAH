@@ -20,7 +20,7 @@
 
 FORK THE REPOSITORY (Repo) 
     <br>
-<a href="https://github.com/Eliahhango/Elitechwiz-MD-QR"><img title="WEB" src="https://img.shields.io/badge/FORK Elitechwiz-QR?color=black&style=for-the-badge&logo=stackshare"></a>
+<a href="https://github.com/Eliahhango/SESSION-GENERATOR-BY-ELIAH"><img title="WEB" src="https://img.shields.io/badge/FORK SESSION-GENERATOR-BY-ELIAH?color=black&style=for-the-badge&logo=stackshare"></a>
 
 Now Deploy
     <br>
