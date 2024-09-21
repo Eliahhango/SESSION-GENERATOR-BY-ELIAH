@@ -57,20 +57,18 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-*_Pair Code Connected by ELIAH TECH*
+*_Pair Code Connected by JUSTATZ TECH*
 *_Made With 🤍_*
 ______________________________________
 ╔════◇
-║ *『 WOW YOU'VE CHOSEN Elitechwiz Md 』*
+║ *『 WOW YOU'VE CHOSEN JustaTz Md 』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@eliahhango_
-║❒ *Owner:* _https://wa.me/255688164510_
-║❒ *Repo:* _https://github.com/Eliahhango/Elitechwiz-Md
-║❒ *WaGroup:* _https://chat.whatsapp.com/CYCsiLbYGKi0q7fc6xiPWk_      ║❒ *WaChannel:* _https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s
-║❒ *Plugins:* _https://github.com/Eliahhango/Elitechwiz-Md-PLUGINS_
+║❒ *Ytube:* _https://youtube.com/@justatz?si=NDlOARTfn9LpP5T6_
+║❒ *Owner:* _https://wa.me/255774044662_
+║❒ *Repo:* _https://github.com/JustaTz01/JUSTATZ-MD
 ╚════════════════════════╝
 _____________________________________
 
