@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Wasi_Tech,
+	default: JustaTz_Tech,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -56,38 +56,35 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_JustaTzi_Tech.sendMessage(Qr_Code_By_JustaTzi_Tech.user.id, { text: '' + b64data });
 	
-				   let Elitechwiz_Md_TEXT = `
-*_Session Connected By Eliah Tech_*
+				   let JustaTz_Md_TEXT = `
+*_Session Connected By JustaTz Tech_*
 *_Made With 🤍_*
 ______________________________________
 ╔════◇
-║ *『AMAZING YOU'VE CHOSEN Elitechwiz-Md』*
+║ *『AMAZING YOU'VE CHOSEN JustaTz-Md』*
 ║ _You Have Completed the First Step to Deploy a Whatsapp Bot._
 ╚════════════════════════╝
 ╔═════◇
 ║  『••• 𝗩𝗶𝘀𝗶𝘁 𝗙𝗼𝗿 𝗛𝗲𝗹𝗽 •••』
-║❒ *Ytube:* _youtube.com/@eliahhango
-║❒ *Owner:* _https://wa.me/255688164510_
-║❒ *Repo:* _https://github.com/Eliahhango/Elitechwiz-Md_
-║❒ *WaGroup:* _https://chat.whatsapp.com/CYCsiLbYGKi0q7fc6xiPWk_
-║❒ *WaChannel:* _https://whatsapp.com/channel/0029VaeEYF0BvvsZpaTPfL2s_
-║❒ *Plugins:* _https://github.com/Eliahhango 
+║❒ *Ytube:* _https://youtube.com/@justatz?si=ec0Hb50WBRn3i3ON
+║❒ *Owner:* _https://wa.me/255774044662_
+║❒ *Repo:* _https://github.com/JustaTz01/JUSTATZ-MD 
 ╚════════════════════════╝
 _____________________________________
 	
 _Don't Forget To Give Star To My Repo_`
-	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Eliah_Tech.user.id,{text:Elitechwiz_Md_TEXT},{quoted:session})
+	 await Qr_Code_By_JustaTz_Tech.sendMessage(Qr_Code_By_JustaTz_Tech.user.id,{text:JustaTz_Md_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Eliah_Tech.ws.close();
+					await Qr_Code_By_JustaTz_Tech.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					Elitechwiz_Md_QR_CODE();
+					JustaTz_Md_QR_CODE();
 				}
 			});
 		} catch (err) {
@@ -100,6 +97,6 @@ _Don't Forget To Give Star To My Repo_`
 			await removeFile("temp/" + id);
 		}
 	}
-	return await Elitechwiz_Md_QR_CODE()
+	return await JustaTz_Md_QR_CODE()
 });
 module.exports = router
