@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eliah Tech Pairing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #000;
+      font-family: 'Arial', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://github.com/Eliahhango.png') center/cover;
+      opacity: 0.2;
+      animation: backgroundZoom 20s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes backgroundZoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.2); }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .box {
+      width: 350px;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      animation: boxGlow 2s infinite alternate;
+    }
+
+    @keyframes boxGlow {
+      0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+      100% { box-shadow: 0 0 30px rgba(89, 53, 172, 0.3); }
+    }
+
+    /* Spinning Disc Profile Picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      position: relative;
+      overflow: hidden;
+      animation: spin 10s linear infinite;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .centered-text {
+      color: #fff;
+      text-align: center;
+      margin: 15px 0;
+      text-shadow: 0 0 10px rgba(89, 53, 172, 0.5);
+    }
+
+    h3.centered-text {
+      font-size: 1.5em;
+      background: linear-gradient(45deg, #5935ac, #c01736);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .input-container input {
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .input-container input:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 15px rgba(89, 53, 172, 0.3);
+    }
+
+    .input-container input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .input-container button {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #5935ac, #c01736);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .input-container button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(89, 53, 172, 0.4);
+    }
+
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: #5935ac;
+      border-radius: 50%;
+      animation: float 3s infinite linear;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+    }
+
+    #waiting-message {
+      color: #5935ac;
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    #pair {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 500px) {
+      .box {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles"></div>
+  <div class="container">
+    <div class="box">
+      <div class="profile-pic">
+        <img src="https://github.com/Eliahhango.png" alt="Eliah">
+      </div>
+      <h3 class="centered-text">ELIAH TECH PAIRING CODE</h3>
+      <div id="text">
+        <h6 class="centered-text">Made By ELIAH HANGO</h6>
+        <h6 class="centered-text">Enter Your Number with Country Code</h6>
+        <div class="input-container">
+          <input type="number" id="number" placeholder="25561783xxx">
+          <button id="submit">Generate Code</button>
+        </div>
+        <div id="waiting-message" style="display: none;">Please wait a while...</div>
+        <main id="pair"></main>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <script>
+    // Create floating particles
+    function createParticles() {
+      const particles = document.querySelector('.particles');
+      for(let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 2 + 's';
+        particles.appendChild(particle);
+      }
+    }
+    createParticles();
+
+    let a = document.getElementById("pair");
+    let b = document.getElementById("submit");
+    let c = document.getElementById("number");
+    let box = document.querySelector(".box");
+
+    async function Copy() {
+      let text = document.getElementById("copy").innerText;
+      let obj = document.getElementById("copy");
+      await navigator.clipboard.writeText(obj.innerText.replace('CODE: ', ''));
+      obj.innerText = "COPIED";
+      obj.style = "color:#5935ac;font-weight:bold";
+      setTimeout(() => {
+        obj.innerText = text;
+        obj.style = "color:white;font-weight:bold";
+      }, 500);
+    }
+
+    b.addEventListener("click", async (e) => {
+      e.preventDefault();
+      if (!c.value) {
+        a.innerHTML = '<div class="centered-text" style="color:#c01736">Enter your WhatsApp number with Country Code</div>';
+      } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
+        a.innerHTML = '<div class="centered-text" style="color:#c01736">Invalid Number</div>';
+      } else {
+        const Eliah_Tech = c.value.replace(/[^0-9]/g, "");
+        let bb = "";
+        let bbc = "";
+        const cc = Eliah_Tech.split('');
+        cc.map(a => {
+          bbc += a;
+          if (bbc.length == 3) bb += " " + a;
+          else if (bbc.length == 8) bb += " " + a;
+          else bb += a;
+        });
+        c.type = "text";
+        c.value = "+" + bb;
+        c.style = "color:#5935ac;font-size:20px";
+        a.innerHTML = '<div class="centered-text">Please Wait...</div>';
+        let { data } = await axios(`/code?number=${Eliah_Tech}`);
+        let code = data.code || "Service Unavailable";
+        a.innerHTML = '<div id="copy" onclick="Copy()" style="color:#5935ac;font-weight:bold;font-size:24px;cursor:pointer">CODE: <span style="color:white">' + code + '</span></div>';
+      }
+    });
+  </script>
+</body>
+</html>
