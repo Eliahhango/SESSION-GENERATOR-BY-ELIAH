@@ -1,0 +1,17 @@
+name: session-generator
+regions:
+- fra
+services:
+- name: session-generator
+  ports:
+  - port: 3000
+    http_protocol: http
+  routes:
+  - path: /
+    public: true
+  run:
+    command: node eliah.js
+    env:
+    - name: PORT
+      value: "3000"
+

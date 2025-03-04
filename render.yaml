@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: session-generator
+    env: node
+    buildCommand: npm install
+    startCommand: node eliah.js
+    envVars:
+      - key: PORT
+        value: 3000
+
