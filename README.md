@@ -3,7 +3,7 @@
 # 🌟 WhatsApp Session Generator 🌟
 
 <div align="center">
-   <img src="https://mallucampaign.in/images/img_1714767949.jpg" width="500" alt="Banner"/>
+   <img src="https://github.com/Eliahhango.png" width="500" alt="Banner"/>
    <br>
    <p align="center">
      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=1000&color=00FF00&center=true&vCenter=true&width=435&lines=Generate+WhatsApp+Sessions;Simple+and+Secure;Quick+and+Easy;24/7+Support" alt="Typing SVG" />
